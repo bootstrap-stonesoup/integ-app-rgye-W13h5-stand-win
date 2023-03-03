@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: integration-suite-test-component-git-source-zizd
+  namespace: integration-e2e-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/dheerajodha/test-images@sha256:d4839d7a494472da9e182852d1260daa35f0bac2449355922e29e2f6a2341f8e
+        name: my-python
+        resources: {}
+status: {}
